@@ -1,0 +1,22 @@
+<%= render 'test/checkout'%>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form action="./cartpostback" method="POST">
+                                        <input type="submit" value="Place Order" />
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <% else %>
+                <div  >
+                        <div id="checkoutButtonDiv" onClick="handleBuyWithMasterPass()">
+                            <a href="#">
+                                <img src="https://www.mastercard.com/mc_us/wallet/img/en/US/mcpp_wllt_btn_chk_147x034px.png" alt="Buy with MasterPass">
+                            </a>
+                        </div>
+                        <p><a href="http://www.mastercard.com/mc_us/wallet/learnmore/en" target="_blank">Learn More</a></p>
+                    
+                </div>  

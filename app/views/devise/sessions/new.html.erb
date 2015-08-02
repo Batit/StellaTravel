@@ -1,0 +1,15 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <br>
+  <br>
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, :class => "form-control", :id => 'exampleInputEmail1', :placeholder => "User Name" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= f.password_field :password, autocomplete: "off", :class => "form-control", :id => 'exampleInputPassword1', :placeholder => "Password" %>
+  </div>
+  <%= f.submit "Log in", :class => "btn btn-primary" %>
+  <%= render "devise/shared/links" %>
+<% end %>
+

@@ -1,0 +1,27 @@
+<% @fare_info.each do |flight| %>
+<li class="list-group-item">
+	<div class="col-md-12" >
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Vuelo</th>
+					<th>Price</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Presidente Masarik 390</td>
+					<td class="price"><%= flight.lowest_fare %> <%= flight.currency_code %></td>
+					<td><%= flight.departure_date_time %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="buttons col-md-offset-10 col-md-2"> 
+		<button  type="submit" class="ch_flight btn btn-primary">Select</button>
+	</div>
+
+</li>
+<% end %>
+

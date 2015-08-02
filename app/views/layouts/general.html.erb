@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stella | Your Personal Travel Asistence</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Custom CSS -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:300,400,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top nav-t">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll row" href="#page-top">
+                        <img class="logoSmall " src="/img/stella-top.png" alt="">
+                </a>
+
+
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#testimonials">
+                            <i class="fa fa-bell fa-1x"></i>
+                        </a>
+                    </li>
+                    <li>
+                    <%= link_to '<i class="icon-logout-1"></i> Log out'.html_safe, destroy_user_session_path, :method => :delete, :class => "md-trigger" %>
+                        <a class="page-scroll" href="#">Joaquin Casanova <img src="/img/users/P1.png" class="nav-user"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav> 
+
+    <!-- Header -->
+
+    <div class=" text-center bill" >
+        <div class="col-md-12">
+                <div class="col-md-4 text-right"> 
+                    <h1>My Trip</h1>
+                  </div>
+                <div class="col-md-8 text-left"> 
+                    <h3><%= @nametrip %></h3>
+                </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+          <div class=" col-md-6">   
+            <h4><%= @origen %><</h4>
+            <h4><%= @destino %><</h4>
+          </div>
+    </div>
+<% if !@data.checkout %>
+    <div class="col-md-offset-2 col-md-8">
+
+        <h3>Transport Options Founded (3)</h3>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading text-right">
+
+            <h6 class="col-md-offset-6 col-md-1 text-left">Display Only</h6> 
+            <input type="money" class="form-control col-md-1" id="min" placeholder="$ 0.00"> 
+            <h6 class="col-md-1">-</h6> 
+            <input type="money" class="form-control col-md-1" id="max" placeholder="$ 1000.00"> 
+            <button  type="submit" class="btn btn-primary">Go</button>
+
+          </div>
+
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item">
+                <img src="/img/logos/uber.png">    
+                <hr>
+                <div class="col-md-12" style="color: #000000;">
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Price</th>
+                        <th>Distance</th>
+                        <th>Time Travel</th>
+                        <th>Promo Code</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="price">9 USD</td>
+                        <td>10 km</td>
+                        <td>20 min</td>
+                        <td> wkebcjls</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="buttons col-md-offset-10 col-md-2"> 
+                    <button  type="submit" class="ch_flight btn btn-primary">Select</button>
+                </div>
+
+            </li>
+            <li class="list-group-item">
+                <img src="/img/logos/cabify.png">    
+                <hr>
+                <div class="col-md-12" style="color: #000000;">
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Price</th>
+                        <th>Distance</th>
+                        <th>Time Travel</th>
+                        <th>Promo Code</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="price">9 USD</td>
+                        <td>10 km</td>
+                        <td>20 min</td>
+                        <td> wkebcjls</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="buttons col-md-offset-10 col-md-2"> 
+                    <button  type="submit" class="ch_flight btn btn-primary">Select</button>
+                </div>
+
+            </li>
+
+            <li class="list-group-item">
+                <img src="/img/logos/blabla car.png">    
+                <hr>
+                <div class="col-md-12" style="color: #000000;">
+                    <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Price</th>
+                        <th>Distance</th>
+                        <th>Time Travel</th>
+                        <th>Promo Code</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="price">9 USD</td>
+                        <td>10 km</td>
+                        <td>20 min</td>
+                        <td> wkebcjls</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="buttons col-md-offset-10 col-md-2"> 
+                    <button  type="submit" class="ch_flight btn btn-primary">Select</button>
+                </div>
+
+            </li>
+
+
+          </ul>
+        </div>
+        
+    </div>
+
+   <div class="col-md-offset-2 col-md-8">
+
+        <h3>Disponible Flights</h3>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading text-right">
+
+            <h6 class="col-md-offset-6 col-md-1 text-left">Display Only</h6> 
+            <input type="money" class="form-control col-md-1" id="min" placeholder="$ 0.00"> 
+            <h6 class="col-md-1">-</h6> 
+            <input type="money" class="form-control col-md-1" id="max" placeholder="$ 1000.00"> 
+            <button  type="submit" class="btn btn-primary">Go</button>
+
+          </div>
+
+          <!-- List group -->
+          <ul class="list-group">
+            <%= yield %>
+          </ul>
+        </div>
+        
+    </div>
+
+<%end%>
+
+    
+        <% if @data.checkout %>
+        <div id="selection" class="col-md-offset-2 col-md-8 check">
+        <%else%>
+        <div id="selection" style="display:none;" class="col-md-offset-2 col-md-8 check">
+        <%end%>
+        <h3> This is Ypur Selection</h3>
+        <div class="panel panel-primary">
+          <!-- Default panel contents -->
+          <div class="panel-heading text-right">
+
+          </div>
+
+          <!-- List group -->
+          <ul class="list-group">
+
+            <div id="flights">
+                
+            </div>
+
+            <li class="list-group-item">
+                <h4>Total</h4>  
+                <hr>
+                <div class="alert alert-success text-right" role="alert">
+                  <a href="#" class="alert-link" id="total">0 USD</a>
+                </div>
+            </li>
+                    <% if @data.checkout %>
+                    <%= render 'test/checkout'%>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <form action="./cartpostback" method="POST">
+                                        <input type="submit" value="Place Order" />
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <% else %>
+                <div  >
+                        <div id="checkoutButtonDiv" onClick="handleBuyWithMasterPass()">
+                            <a href="#">
+                                <img src="https://www.mastercard.com/mc_us/wallet/img/en/US/mcpp_wllt_btn_chk_147x034px.png" alt="Buy with MasterPass">
+                            </a>
+                        </div>
+                        <p><a href="http://www.mastercard.com/mc_us/wallet/learnmore/en" target="_blank">Learn More</a></p>
+                    
+                </div>
+                <% end %>
+
+          </ul>
+        </div>
+        
+    </div>
+
+
+
+
+    <footer>
+        <br>
+        <div class="row">
+            <div class="col-md-2 text-center">
+                <ul>
+                    <h5> Company </h5>
+                            <br>
+                    <a href="">About us</a>
+                    <a href="">Newsroom</a>
+                    <a href="">Contact Us</a>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <ul>
+                    <h5> Travels </h5>
+                            <br>
+                    <a href="">About us</a>
+                    <a href="">Newsroom</a>
+                    <a href="">Contact Us</a>
+                </ul>
+            </div>
+            <div class="col-md-2 text-center">
+                <ul>
+                    <h5> Legal </h5>
+                            <br>
+                    <a href="">About us</a>r
+                    <a href="">Newsroom</a>
+                    <a href="">Contact Us</a>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <br>
+                <br>
+                <br>
+                <br>
+                <span class="fa-stack fa-lg">
+                    <a href=""><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <a href=""><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <a href=""><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></a>
+                </span>
+                <span class="fa-stack fa-lg">
+                  <a href=""><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></a>
+                </span>
+            </div>
+            
+        </div>
+        
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="/js/jquery.js"></script>
+    <script type="text/javascript">
+        $('.ch_flight').on('click', function() {
+            $('#selection').slideDown()
+            var parent = $(this).parents('li');
+            $('#flights').append(parent[0]);
+            var remover = $(this).clone();
+            remover.html('Delete')
+            remover.addClass('remover')
+            remover.removeClass('ch_flight')
+            $(parent).find('div.buttons').html(remover)
+            $('.remover').unbind();
+            $('.remover').on('click', function() {
+                var parent = $(this).parents('li');
+                parent.remove()
+                var count = 0;
+                $('div#flights .price').each(function(k,v) {
+                    var element = $(v).html().replace('USD', '')
+                    count = count+parseInt(element)
+                })
+                $('#total').html(count+"USD")
+            })
+            $(this).remove();
+            var count = 0;
+            $('div#flights .price').each(function(k,v) {
+                var element = $(v).html().replace('USD', '')
+                count = count+parseInt(element)
+            })
+            $('#total').html(count+" USD")
+        })
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/front.js"></script>
+    <%= masterpass_js_tags @data %>    
+        <script>
+        var showRewards = false == true;
+        $(document).ready(function(){
+            if (showRewards){
+                var sampleCodeString = 'MasterPass.client.checkout({\n\t"requestToken":<%= @data.request_token_response.oauth_token%>,\n\t"callbackUrl":<%= @data.callback_url%>,\n\t"merchantCheckoutId":<%= @data.checkout_identifier%>,\n\t"allowedCardTypes":<%= @data.accepted_cards%>,\n\t"cancelCallback":<%= @data.callback_domain%>,\n\t"suppressShippingAddressEnable":<%= @data.shipping_suppression%>,\n\t"loyaltyEnabled":<%= @data.rewards%>,\n\t"allowedLoyaltyPrograms":<%= raw @data.allowed_loyalty_programs%>,\n\t"requestBasicCheckout":<%= @data.auth_level_basic%>,\n\t"version":"v6"\n});';
+            } else {
+                var sampleCodeString = 'MasterPass.client.checkout({\n\t"requestToken":<%= @data.request_token_response.oauth_token%>,\n\t"callbackUrl":<%= @data.callback_url%>,\n\t"merchantCheckoutId":<%= @data.checkout_identifier%>,\n\t"allowedCardTypes":<%= @data.accepted_cards%>,\n\t"cancelCallback":<%= @data.callback_domain%>,\n\t"suppressShippingAddressEnable":<%= @data.shipping_suppression%>,\n\t"loyaltyEnabled":<%= @data.rewards%>,\n\t"requestBasicCheckout":<%= @data.auth_level_basic%>,\n\t"version":"v6"\n});';
+            }
+            $("#sampleCode").text(sampleCodeString);
+            
+        })
+        
+        $('#pairingCheckout').click(function(event) {
+                $("#pairingCheckoutForm").attr("action", "/pairingtoken?checkout=true");
+                $("#pairingCheckoutForm").submit();
+        });
+
+        function handleBuyWithMasterPass() {
+            if (showRewards){
+                MasterPass.client.checkout({
+                     "requestToken":"<%= @data.request_token_response.oauth_token%>",
+                     "callbackUrl":"<%=@host_name + @data.callback_url%>",
+                     "merchantCheckoutId":"<%= @data.checkout_identifier%>",
+                     "allowedCardTypes":"<%= @data.accepted_cards%>",
+                     "cancelCallback" : "<%= @data.callback_domain%>",
+                     "suppressShippingAddressEnable": "<%= @data.shipping_suppression%>",
+                     "loyaltyEnabled" : "<%= @data.rewards%>",
+                     "allowedLoyaltyPrograms":<%= raw @data.allowed_loyalty_programs%>,
+                     "requestBasicCheckout" : <%= @data.auth_level_basic%>,
+                     "version":"v6"
+                });
+            } else {
+                MasterPass.client.checkout({
+                     "requestToken":"<%= @data.request_token_response.oauth_token%>",
+                     "callbackUrl":"<%= @host_name + @data.callback_url%>",
+                     "merchantCheckoutId":"<%= @data.checkout_identifier%>",
+                     "allowedCardTypes":"<%= @data.accepted_cards%>",
+                     "cancelCallback" : "<%= @data.callback_domain%>",
+                     "suppressShippingAddressEnable": "<%= @data.shipping_suppression%>",
+                     "loyaltyEnabled" : "<%= @data.rewards%>",
+                     "requestBasicCheckout" : <%= @data.auth_level_basic%>,
+                     "version":"v6"
+                });
+            }
+        }
+        
+        
+   </script> 
+   <script type="text/javascript" src="javascripts/common.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://jquery-xml2json-plugin.googlecode.com/svn/trunk/jquery.xml2json.js"></script> 
+    <script type="text/javascript" src="<%=@data.lightbox_url%>"</script>
+    <script type="text/javascript" src="https://sandbox.masterpass.com/lightbox/Switch/assets/js/MasterPass.omniture.js"></script>
+    <script type="text/javascript" src="javascripts/tooltips/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="javascripts/tooltips/commonToolTips.js"></script>
+
+</body>
+
+</html>

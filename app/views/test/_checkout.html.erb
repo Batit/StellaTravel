@@ -1,0 +1,283 @@
+<h3 style="color:black">Transaction Complete</h3>
+<li class="list-group-item">
+    <div class="alert alert-danger text-right" role="alert">
+        <a href="#" class="alert-link"> Your configuration exceeds the budget.      2150 $</a>
+    </div>
+</li>
+<fieldset style="color:black">
+	<legend>General Information</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th><label for="TransactionId"> Transaction Id:</label>
+				</th>
+				<td>
+					<%= @data.checkout.transactionId %>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+</fieldset>
+<% if @data.checkout.card %>
+<fieldset style="color:black">
+	<legend>Card Information</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th><label for="Card_CardHolderName"> Cardholder Name:</label>
+				</th>
+				<td>
+					<%= @data.checkout.card.cardHolderName %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_AccountNumber"> Account Number:</label>
+				</th>
+				<td>
+					<%= @data.checkout.card.accountNumber %>
+				</td>
+			</tr>
+			<tr>
+				<th>Billing Address:</th>
+				<td>
+					<%= @data.checkout.card.billingAddress.line1 %>
+					<br> 
+					<%= @data.checkout.card.billingAddress.line2 %>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<%= @data.checkout.card.billingAddress.city %> <%= @data.checkout.card.billingAddress.countrySubdivision %> <%= @data.checkout.card.billingAddress.postalCode %>
+					<br>
+					<%= @data.checkout.card.billingAddress.country %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_ExpiryDate"> Expiration Date:</label>
+				</th>
+				<td>
+					<% if @data.checkout.card != nil %>
+					  <%= @data.checkout.card.expiryMonth %>/<%= @data.checkout.card.expiryYear %>
+					 <% end %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_BrandId">Brand Id:</label>
+				</th>
+				<td>
+					<%= @data.checkout.card.brandId %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_BrandName">Brand Name:</label>
+				</th>
+				<td>
+					<%= @data.checkout.card.brandName %>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+<% else %>
+<fieldset style="color:black">
+	<legend>Card Information</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th><label for="Card_CardHolderName"> Cardholder Name:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_AccountNumber"> Account Number:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th>Billing Address:</th>
+				<td>
+					<br> 
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+				
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_ExpiryDate"> Expiration Date:</label>
+				</th>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_BrandId">Brand Id:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Card_BrandName">Brand Name:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+<% end %>
+<% if @data.checkout.contact %>
+<fieldset style="color:black">
+	<legend>Contact Information</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th>Name:</th>
+				<td>
+					<%= @data.checkout.contact.firstName %> <%= @data.checkout.contact.lastName %>
+				</td>
+			</tr>
+			<tr>
+				<th>Gender:</th>
+				<td>
+					<%= @data.checkout.contact.gender %>
+				</td>
+			</tr>	
+			<tr>
+				<th>Date of Birth:</th>
+				<td>
+					<% if @data.checkout.contact.dateOfBirth != nil %>
+						<%= @data.checkout.contact.dateOfBirth.month %> / <%= @data.checkout.contact.dateOfBirth.day %> / <%= @data.checkout.contact.dateOfBirth.year %> 
+					<% end %>
+				</td>
+			</tr>
+			<tr>
+				<th>National ID:</th>
+				<td>
+					<%= @data.checkout.contact.nationalID %>
+				</td>
+			</tr>			
+			<tr>
+				<th>Country:</th>
+				<td>
+					<%= @data.checkout.contact.country %>
+				</td>
+			</tr>																									
+			<tr>
+				<th><label for="Contact_PhoneNumber"> Phone Number:</label>
+				</th>
+				<td>
+					<%= @data.checkout.contact.phoneNumber %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Contact_EmailAddress"> Email Address:</label>
+				</th>
+				<td>
+					<%= @data.checkout.contact.emailAddress %>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+<% else %>
+<fieldset style="color:black">
+	<legend>Contact Information</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th>Name:</th>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th>Gender:</th>
+				<td>
+				</td>
+			</tr>	
+			<tr>
+				<th>Date of Birth:</th>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<th>National ID:</th>
+				<td>
+				</td>
+			</tr>			
+			<tr>
+				<th>Country:</th>
+				<td>
+				</td>
+			</tr>																									
+			<tr>
+				<th><label for="Contact_PhoneNumber"> Phone Number:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="Contact_EmailAddress"> Email Address:</label>
+				</th>
+				<td>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+<% end %>
+<% if @data.checkout.shippingAddress %>
+<fieldset style="color:black">
+	<legend>Shipping Address</legend>
+	<table>
+		<tbody>
+			<tr>
+				<th><label for="ShippingAddress_RecipientName"> Recipient Name:</label>
+				</th>
+				<td>
+					<%= @data.checkout.shippingAddress.recipientName %>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="ShippingAddress_RecipientPhoneNumber"> Recipient
+						Phone Number:</label>
+				</th>
+				<td>
+					<%= @data.checkout.shippingAddress.recipientPhoneNumber %>
+				</td>
+			</tr>
+			<tr>
+				<th>Address:</th>
+				<td>
+					<%= @data.checkout.shippingAddress.line1 %>
+					<br>
+					<%= @data.checkout.shippingAddress.line2 %>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<%= @data.checkout.shippingAddress.city %> <%= @data.checkout.shippingAddress.countrySubdivision %> <%= @data.checkout.shippingAddress.postalCode %>
+					<br>
+					<%= @data.checkout.shippingAddress.country %>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+<% end %>
+<script type="text/javascript" src="javascripts/common.js"></script>
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="https://jquery-xml2json-plugin.googlecode.com/svn/trunk/jquery.xml2json.js"></script> 
+    <script type="text/javascript" src="<%=@data.lightbox_url%>"</script>
+	<script type="text/javascript" src="https://sandbox.masterpass.com/lightbox/Switch/assets/js/MasterPass.omniture.js"></script>
+	<script type="text/javascript" src="javascripts/tooltips/jquery.qtip.min.js"></script>
+	<script type="text/javascript" src="javascripts/tooltips/commonToolTips.js"></script>
